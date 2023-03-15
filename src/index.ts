@@ -1,7 +1,16 @@
-console.log('hello')
+import express, {Express, Request, Response} from 'express';
+const app: Express = express();
+const PORT = process.env.PORT || 3000;
 
-function add(num1: number, num2: number, num3?: number): number { // the ? makes num3 optional
-  return num1 + num2;
-}
+//app.use(express.json()); // middleware that would parse incoming and outgoing request
 
-console.log(add(4,5));
+app.get('/', (req: Request, res: Response) => { // You don't need to expressly state Request and Response
+  res.send("hello world"); 
+});
+
+app.listen(PORT, () => {
+  console.log(`app is listening @ http://localhost:${PORT}`);
+});
+
+// convert this to use typescript
+// set up some npm scripts so that my code auto transpiles
