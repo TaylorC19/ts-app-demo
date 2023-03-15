@@ -8,7 +8,7 @@ const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 //app.use(express.json()); // middleware that would parse incoming and outgoing request
 app.get('/', (req, res) => {
-    res.send("hello world");
+    res.send("hello!");
 });
 app.listen(PORT, () => {
     console.log(`app is listening @ http://localhost:${PORT}`);

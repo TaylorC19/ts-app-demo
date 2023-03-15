@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 //app.use(express.json()); // middleware that would parse incoming and outgoing request
 
 app.get('/', (req: Request, res: Response) => { // You don't need to expressly state Request and Response
-  res.send("hello world"); 
+  res.send("hello!");
 });
 
 app.listen(PORT, () => {
